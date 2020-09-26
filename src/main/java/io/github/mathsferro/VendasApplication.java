@@ -1,4 +1,6 @@
 package io.github.mathsferro;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -8,9 +10,13 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController // Essa classe será controllador Rest, poderemos mandar mensagem para o browser atraves dessa classe
 public class VendasApplication {
 
+    @Autowired
+    @Qualifier("applicationName")
+    private String applicationName;
+
     @GetMapping("/hello")
     public String helloWorld() {
-        return "Hello World";
+        return applicationName;
     }
 
     public static void main(String[] args) {

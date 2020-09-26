@@ -20,10 +20,14 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId> <!-- Precisamos dele para adicionar o SpringBootApllication -->
         </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
+            <artifactId>spring-boot-starter-web</artifactId> <!-- Responsável para criarmos páginas webs e webservices -->
         </dependency>
+
+        <!-- Data-jpa Classes que operam com base de dados -->
+
     </dependencies>
 
     <build>
